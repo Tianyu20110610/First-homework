@@ -19,6 +19,7 @@ body{
   display : grid;
   place-items : center;  
   height : 100vh;
+  background-color: orange;
   }
 #size {
     position: absolute;
@@ -32,42 +33,40 @@ body{
   
 }
 
-
-@media screen and (max-width : 575px){
-    .box{
-      .text1 {
+.text1::before{
+  content:"";
+}
+@media screen and (max-width : 675px){
+      .text1::before {
             display: block;
-            background-color: var(--mob);
             content:"Thor";
         }
-      
-    }
-   
+      .box{
+        background-color: var(--mob);
+      }
 }
-@media screen and (min-width : 576) and (max-width : 767px){
-  .box{
-    .text1 {
+@media screen and (min-width : 676px) and (max-width : 767px){
+    .text1::before {
         display: block;
-        background-color: var(--tab);
+        
+        content:"Iron man";
     }
-    
-  }   
+    .box{background-color: var(--tab);}
 }
-@media screen and (min-width : 768px) and (max-width : 1399){
-  .box{
-    .text1 {
+@media screen and (min-width : 768px) and (max-width : 1399px){
+    .text1::before {
         display: block;
-        background-color: var(--laptop);
+        
+        content:"Hulk";
     }
-    
-  }     
+    .box{background-color: var(--laptop);} 
 }
 @media screen and (min-width : 1400px){
-  .box{
-    .text1 {
+  
+    .text1::before {
         display: block;
-        background-color: var(--desktop);
+        
+        content:"Captain america";
     }
-    
-  }        
+    .box{background-color: var(--desktop);}    
 }
